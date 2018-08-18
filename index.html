@@ -4,38 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>TP Gestion de stock</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
 
 <body>
-    <h1 class="title">TP Gestion de Stock</h1>
-    <button class="createProduct" id="createProduct">Cr&eacute;ez votre nouveau produit</button>
+    <h1 class="title">TP - Gestion de Stock</h1>
+    <button class="createProduct" id="createProduct">Cr&eacute;ez votre Produit</button>
+    <div id="container" class="container">
+        <fieldset class="form">
+            <legend>D&eacute;tails du produit:</legend>
 
-    <fieldset>
-        <legend>D&eacute;tails du produit:</legend>
+            <div class="productName">
+                <label for="prodName">Nom du produit:</label>
+                <input type="text" id="prodName" name="prodName" required minlength="4" placeholder="4 caractères min." />
+                <span class="validity"></span>
+            </div>
 
-        <div class="productName">
-            <label for="prodName">Nom du produit:</label>
-            <input type="text" id="prodName" name="prodName" required minlength="4" placeholder="4 caractères min." />
-            <span class="validity"></span>
-        </div>
+            <div class="productPrice">
+                <label for="prodPrice">Prix du produit:</label>
+                <input type="number" id="prodPrice" name="prodPrice" required minlength="1" placeholder="Prix" />
+                <span class="validity"></span>
+            </div>
 
-        <div class="productPrice">
-            <label for="prodPrice">Prix du produit:</label>
-            <input type="number" id="prodPrice" name="prodPrice" required minlength="1" placeholder="Prix" />
-            <span class="validity"></span>
-        </div>
+            <div class="productDescr">
+                <label for="prodDescr">Description produit:</label>
+                <input type="text" id="prodDescr" name="prodDescr" required minlength="15" maxlength="200" placeholder="200 caractères max" />
+                <span class="validity"></span>
+            </div>
 
-        <div class="productDescr">
-            <label for="prodDescr">Description produit:</label>
-            <input type="text" id="prodDescr" name="prodDescr" required minlength="15" maxlength="200" placeholder="200 caractères max" />
-            <span class="validity"></span>
-        </div>
+            <button class="addProduct" id="addProduct">Ajoutez votre nouveau produit</button>
+        </fieldset>
 
-        <button class="addProduct" id="addProduct">Ajoutez votre nouveau produit</button>
+        <div id="prods" class="prods"></div>
+    </div>
 
-    </fieldset>
 
 </body>
 
