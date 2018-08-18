@@ -13,14 +13,9 @@
 
 #container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around
 }
 
-#prods {
-    width: 400px;
-    height: 400px;
-    border: 3px solid dodgerblue;
-}
 
 legend {
     background-color: #000;
@@ -55,11 +50,17 @@ legend {
     color: white;
 }
 
-.form,
-.newProds {
+.form {
     width: 400px;
     height: 100%;
-    display: flex;
+    display: none;
+}
+
+.newProds {
+    width: 500px;
+    max-width: 700px;
+    height: 500px;
+    overflow: auto;
     display: none;
 }
 
@@ -86,4 +87,20 @@ input:valid + span:after {
     content: '✓';
     color: #26b72b;
     padding-left: 5px;
+}
+
+table,
+td {
+    border-collapse: collapse;
+    border: 1px solid #333;
+    padding: 20px;
+}
+
+thead > tr > td {
+    border: 1px solid white;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
 }

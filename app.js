@@ -32,6 +32,7 @@ var app = (function app() {
             alert("vous avez oubliez de remplir un champ produit")
         } else {
             count++;
+            afficherNewProducs();
             return new CreateProduct({
                 nom: dom.nom.value,
                 prix: dom.prix.value,
@@ -39,7 +40,6 @@ var app = (function app() {
                 ref: ref()
             });
         }
-
     };
 
     const convertToArray = function convertToArray(obj) {
@@ -50,11 +50,19 @@ var app = (function app() {
         return tmp;
     };
 
+    var ajouterLigneTableau = function () {
+        var ligne = document.createElement("tr");
+        return dom.tableau.appendChild(ligne);
+
+    }
+
     var ecrireProducts = function () {
         var prodTableau = convertToArray(alertIfMissingValues())
-        afficherNewProducs();
+        var ligneCree = ajouterLigneTableau();
         prodTableau.forEach(function (elem) {
-            dom.newProds.innerHTML += elem + "<br>";
+            var newTd = document.createElement("td")
+            ligneCree.appendChild(newTd).innerHTML = elem;
+
         })
     };
 
@@ -72,6 +80,7 @@ var app = (function app() {
         dom.descr = document.getElementById('prodDescr');
         dom.newProds = document.getElementById('newProds');
         dom.prodList = document.getElementById('products');
+        dom.tableau = document.getElementById('tbody');
 
 
 

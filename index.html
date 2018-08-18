@@ -30,7 +30,7 @@
 
             <div class="productDescr">
                 <label for="prodDescr">Description produit:</label>
-                <input type="text" id="prodDescr" name="prodDescr" required minlength="5" maxlength="200" placeholder="200 caractères max" />
+                <input type="text" id="prodDescr" name="prodDescr" required minlength="1" maxlength="200" placeholder="200 caractères max" />
                 <span class="validity"></span>
             </div>
 
@@ -38,7 +38,20 @@
         </fieldset>
         <fieldset class="newProds" id="newProds">
             <legend>Produits fraichement crées</legend>
-            <div id="producs"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Nom du produit</td>
+                        <td>Prix (€)</td>
+                        <td>Description</td>
+                        <td>R&eacute;f&eacute;rence</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
         </fieldset>
 
     </div>
