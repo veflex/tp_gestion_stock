@@ -13,7 +13,7 @@
     <h1 class="title">TP - Gestion de Stock</h1>
     <button class="createProduct" id="createProduct">Cr&eacute;ez votre Produit</button>
     <div id="container" class="container">
-        <fieldset class="form">
+        <fieldset id="form" class="form">
             <legend>D&eacute;tails du produit:</legend>
 
             <div class="productName">
@@ -30,7 +30,7 @@
 
             <div class="productDescr">
                 <label for="prodDescr">Description produit:</label>
-                <input type="text" id="prodDescr" name="prodDescr" required minlength="15" maxlength="200" placeholder="200 caractères max" />
+                <input type="text" id="prodDescr" name="prodDescr" required minlength="5" maxlength="200" placeholder="200 caractères max" />
                 <span class="validity"></span>
             </div>
 

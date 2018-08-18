@@ -59,6 +59,11 @@ legend {
     width: 400px;
     height: 100%;
     display: flex;
+    display: none;
+}
+
+.is-active {
+    display: block;
 }
 
 .form > div {
