@@ -55,7 +55,8 @@ legend {
     color: white;
 }
 
-.form {
+.form,
+.newProds {
     width: 400px;
     height: 100%;
     display: flex;
