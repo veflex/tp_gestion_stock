@@ -10,6 +10,7 @@ var app = (function app() {
         this.price = obj.prix;
         this.descr = obj.description;
         this.ref = obj.ref;
+        this.suppr = "✖"
     };
 
     var afficherForm = function () {
@@ -53,23 +54,26 @@ var app = (function app() {
     var ajouterLigneTableau = function () {
         var ligne = document.createElement("tr");
         return dom.tableau.appendChild(ligne);
-
+    }
+    var supprimerProduct = function () {
+        this.parentNode.remove();
+    }
+    var eventLastTd = function () {
+        dom.lastTd = document.querySelectorAll('#tbody td:last-child');
+        dom.lastTd.forEach(function (td) {
+            td.addEventListener("click", supprimerProduct)
+        })
     }
 
     var ecrireProducts = function () {
         var prodTableau = convertToArray(alertIfMissingValues())
         var ligneCree = ajouterLigneTableau();
         prodTableau.forEach(function (elem) {
-            var newTd = document.createElement("td")
+            var newTd = document.createElement("td");
             ligneCree.appendChild(newTd).innerHTML = elem;
-
+            eventLastTd()
         })
     };
-
-
-
-
-
 
     var start = function () {
         dom.creer = document.getElementById('createProduct');
@@ -81,8 +85,6 @@ var app = (function app() {
         dom.newProds = document.getElementById('newProds');
         dom.prodList = document.getElementById('products');
         dom.tableau = document.getElementById('tbody');
-
-
 
         dom.creer.addEventListener("click", afficherForm);
 

@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    font-family: 'Lobster', cursive;
+    font-family: 'Merienda', cursive;
 }
 
 .title {
-    height: 70px;
+    height: 90px;
     width: 250px;
     margin: 0 auto 50px;
     text-align: center;
@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-around
 }
-
 
 legend {
     background-color: #000;
@@ -28,7 +27,7 @@ legend {
 .addProduct {
     display: block;
     width: 200px;
-    height: 50px;
+    height: 60px;
     background: rgba(30, 255, 134, 0.47);
     box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
     margin: 0 auto 50px;
@@ -58,8 +57,7 @@ legend {
 
 .newProds {
     width: 500px;
-    max-width: 700px;
-    height: 500px;
+    height: auto;
     overflow: auto;
     display: none;
 }
@@ -74,7 +72,6 @@ legend {
 
 [placeholder] {
     text-align: center;
-
 }
 
 input:invalid + span:after {
@@ -89,14 +86,25 @@ input:valid + span:after {
     padding-left: 5px;
 }
 
+table {}
+
 table,
 td {
     border-collapse: collapse;
+
     border: 1px solid #333;
     padding: 20px;
 }
 
+#tbody td:last-child {
+    text-align: center;
+    cursor: pointer;
+}
+
 thead > tr > td {
+    min-width: 150px;
+    max-width: 300px;
+    text-align: center;
     border: 1px solid white;
 }
 
